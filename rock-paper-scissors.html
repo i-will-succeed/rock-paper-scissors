@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+
+        // Generates random number between 0 and 2, and applies 'rock', 'paper', or 'scissors' to value
+        function computerPlay() {
+            randomNumber = Math.floor(Math.random() * 3)
+            if (randomNumber === 0) {
+                return 'Rock';
+            } else if (randomNumber === 1) {
+                return 'Paper';
+            } else {
+                return 'Scissors';
+            }
+
+
+            function gameRound(playerSelection, computerSelection) {
+                if (playerSelection === 'Rock' && computerSelection === 'Rock') {
+                    // Score remains 0
+                    console.log("It's a tie!")
+                } else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
+                    // Computer Score + 1
+                    console.log("You lose!")
+                } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
+                    // Player Score + 1
+                    console.log("You win!")
+                }
+            }
+
+
+            let playerChoice = prompt("Rock, Paper, Scissors?");
+
+        }
+    </script>
+</body>
+</html>
