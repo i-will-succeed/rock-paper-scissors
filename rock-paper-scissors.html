@@ -58,12 +58,18 @@
       }
     }
 
-    const playerSelection = 'rOcK'.toLowerCase();
-    const computerSelection = computerPlay().toLowerCase();
+    // const playerSelection = 'rOcK'.toLowerCase();
+    // let computerSelection = computerPlay().toLowerCase();
 
-    console.log(gameRound(playerSelection, computerSelection))
 
-     // let playerChoice = prompt("rock, paper, scissors?");
+    function game() {
+    
+        for (let i = 0; i < 5; i++) {
+            const computerSelection = computerPlay().toLowerCase();
+            const playerSelection = prompt("Rock, Paper, Scissors?").toLowerCase();
+            alert(gameRound(playerSelection, computerSelection));
+        }
+    }
 
 
     </script>
