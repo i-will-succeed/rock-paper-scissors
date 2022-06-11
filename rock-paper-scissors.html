@@ -5,15 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <h1>Rock Paper Scissors</h1>
     <h2>5 Rounds... GO!</h2>
 
     <script>
-
       // Generates random number between 0 and 2, and applies 'rock', 'paper', or 'scissors' to value
       function computerPlay() {
         randomNumber = Math.floor(Math.random() * 3);
@@ -30,55 +28,63 @@
       //  Compares playerSelection to computerSelection and returns result
       function gameRound(playerSelection, computerSelection) {
         if (playerSelection === "rock" && computerSelection === "rock") {
-          // Score remains 0
-          return "It's a Tie!";
+          return "It's a Tie! You both chose Rock!";
         } else if (
-          playerSelection === "rock" && computerSelection === "paper"
+          playerSelection === "rock" &&
+          computerSelection === "paper"
         ) {
           computerScore += 1;
           return "You Lose! Paper Beats Rock!";
         } else if (
-          playerSelection === "rock" && computerSelection === "scissors"
+          playerSelection === "rock" &&
+          computerSelection === "scissors"
         ) {
           playerScore += 1;
           return "You Win! Rock Beats Scissors!";
+
+
         } else if (
-          playerSelection === "paper" && computerSelection === "paper"
+          playerSelection === "paper" &&
+          computerSelection === "paper"
         ) {
-          // Score remains 0
-          return "It's a Tie!";
+          return "It's a Tie! You both chose Paper!";
         } else if (
-          playerSelection === "paper" && computerSelection === "scissors"
+          playerSelection === "paper" &&
+          computerSelection === "scissors"
         ) {
           computerScore += 1;
           return "You Lose! Scissors Beats Paper!";
         } else if (
-          playerSelection === "paper" && computerSelection === "rock"
+          playerSelection === "paper" &&
+          computerSelection === "rock"
         ) {
           playerScore += 1;
           return "You Win! Paper Beats Rock!";
+
+          
         } else if (
-          playerSelection === "scissors" && computerSelection === "scissors"
+          playerSelection === "scissors" &&
+          computerSelection === "scissors"
         ) {
-          // Score remains 0
-          return "It's a Tie!";
+          return "It's a Tie! You both chose Scissors!";
         } else if (
-          playerSelection === "scissors" && computerSelection === "rock"
+          playerSelection === "scissors" &&
+          computerSelection === "rock"
         ) {
           computerScore += 1;
           return "You Lose! Rock Beats Scissors!";
         } else if (
-          playerSelection === "scissors" && computerSelection === "paper"
+          playerSelection === "scissors" &&
+          computerSelection === "paper"
         ) {
           playerScore += 1;
           return "You Win! Scissors Beats Paper!";
-        }
-        else {
-            return "Invalid Input"
+        } else {
+          return "Invalid Input";
         }
       }
 
-    //   MAIN GAME FUNCTION
+      //   MAIN GAME FUNCTION
       let computerScore = 0;
       let playerScore = 0;
 
@@ -89,8 +95,10 @@
 
         for (let i = 0; i < 5; i++) {
           const computerSelection = computerPlay().toLowerCase();
-          const playerSelection = prompt("Rock, Paper, Scissors?").toLowerCase();
-          const scoreCount = `Your score is: ${playerScore}, Computer Score is: ${computerScore}`
+          const playerSelection = prompt(
+            "Rock, Paper, Scissors?"
+          ).toLowerCase();
+          const scoreCount = `Your score is: ${playerScore}, Computer Score is: ${computerScore}`;
 
           alert(gameRound(playerSelection, computerSelection), scoreCount);
           alert(scoreCount);
@@ -99,15 +107,15 @@
         }
 
         // Final Score
-        alert(`Final SCORE: Your score is: ${playerScore}, Computer Score is: ${computerScore}`);
+        alert(
+          `Final SCORE: Your score is: ${playerScore}, Computer Score is: ${computerScore}`
+        );
 
         // Prompt user if they want to play again. If TRUE, game() gets called again.
-        let playAgain = confirm("Play again?") ? game() : null
+        let playAgain = confirm("Play again?") ? game() : null;
       }
 
-
       game();
-
     </script>
   </body>
 </html>
