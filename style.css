@@ -4,3 +4,51 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
 }
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: blueviolet;
+}
+
+.scoreContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+
+}
+
+.gameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+
+.button {
+    /* padding: 2rem; */
+    border: blueviolet 2px solid;
+    border-radius: 10px;
+    /* box-shadow: 5px 2.5px 2.5px rgba(0, 0, 0, 0.404); */
+}
+
+.button:hover {
+    background-color: rgba(128, 128, 128, 0.062);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.button:after {
+}
+
+
+.button img {
+    height: auto;
+    width: 200px;
+    color: white;
+}
+
