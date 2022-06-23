@@ -36,32 +36,32 @@ function computerPlay() {
 // LOGIC: Compares, keeps score, and returns result
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "rock" && computerSelection === "rock") {
-    return "It's a Tie!\nYou both chose Rock!";
+    return "It's a Tie!\n\nYou both chose Rock!";
   } else if (playerSelection === "rock" && computerSelection === "paper") {
     computerScore += 1;
-    return "You Lose!\nPaper Beats Rock!";
+    return "You Lose!\n\nComputer chose Paper\n&\nPaper beats Rock!";
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
     playerScore += 1;
-    return "You Win!\nRock Beats Scissors!";
+    return "You Win!\n\nComputer chose Scissors\n&\nRock beats Scissors!";
   } else if (playerSelection === "paper" && computerSelection === "paper") {
-    return "It's a Tie!\nYou both chose Paper!";
+    return "It's a Tie!\n\nYou both chose Paper!";
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
     computerScore += 1;
-    return "You Lose!\nScissors Beats Paper!";
+    return "You Lose!\n\nComputer chose Scissors\n&\nbeats Paper!";
   } else if (playerSelection === "paper" && computerSelection === "rock") {
     playerScore += 1;
-    return "You Win!\nPaper Beats Rock!";
+    return "You Win!\n\nComputer chose Rock\n&\nPaper beats Rock!";
   } else if (
     playerSelection === "scissors" &&
     computerSelection === "scissors"
   ) {
-    return "It's a Tie!\nYou both chose Scissors!";
+    return "It's a Tie!\n\nYou both chose Scissors!";
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     computerScore += 1;
-    return "You Lose!\nRock Beats Scissors!";
+    return "You Lose!\n\nComputer chose Rock\n&\nRock beats Scissors!";
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
     playerScore += 1;
-    return "You Win!\nScissors Beats Paper!";
+    return "You Win!\n\nComputer chose Paper\n&\nScissors beats Paper!";
   } else {
     return "Invalid Input";
   }
