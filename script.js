@@ -82,6 +82,7 @@ function compareScores() {
       button.removeEventListener("click", getPlayerSelection);
     });
     gameResults.innerText = `Final Score\n\nYour score is: ${playerScore}\nComputer Score is: ${computerScore}`;
+
     endResults.style.visibility = "visible";
     playAgain();
     if (playerScore > computerScore) {
@@ -101,15 +102,17 @@ buttons.forEach((button) => {
 
 function playAgain() {
   modal.showModal();
+  
   closeModal.addEventListener('click', () => {
     modal.close();
   })
   continuePlaying.addEventListener('click', () => {
     modal.close();
-    mainGame();
+    window.location.reload();
   })
   
   // If YES:
   // playerScore = 0;
   // computerScore = 0;
 }
+
