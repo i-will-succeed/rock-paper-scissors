@@ -3,13 +3,22 @@ const buttons = document.querySelectorAll(".button");
 const playerScoreDisplayed = document.getElementById("playerScore");
 const computerScoreDisplayed = document.getElementById("computerScore");
 const gameResults = document.querySelector(".gameResults");
-const endResults = document.querySelector(".endResults")
+const endResults = document.querySelector(".endResults");
+
+const modal = document.querySelector(".modal");
+const closeModal = document.querySelector(".closeModal");
+const continuePlaying = document.querySelector('.continue');
+
+// openModal.addEventListener('click', () => {
+//   modal.showModal();
+// })
+
 let computerScore = 0;
 let playerScore = 0;
 let playerSelection;
 
 // Hides End Results
-endResults.style.visibility= "hidden";
+endResults.style.visibility = "hidden";
 
 // Generates random number between 0 and 2,
 // and applies 'rock', 'paper', or 'scissors' to value
@@ -61,7 +70,7 @@ function playRound(playerSelection, computerSelection) {
 function getPlayerSelection(e) {
   playerSelection = e.target.alt;
   gameResults.innerText = playRound(playerSelection, computerPlay());
-  compareScores()
+  compareScores();
 }
 
 function compareScores() {
@@ -72,14 +81,17 @@ function compareScores() {
     buttons.forEach((button) => {
       button.removeEventListener("click", getPlayerSelection);
     });
-    gameResults.innerText = `Final Score\n\nYour score is: ${playerScore}\nComputer Score is: ${computerScore}`
-    endResults.style.visibility= "visible";
+    gameResults.innerText = `Final Score\n\nYour score is: ${playerScore}\nComputer Score is: ${computerScore}`;
+    endResults.style.visibility = "visible";
+    playAgain();
     if (playerScore > computerScore) {
-      endResults.textContent = 'VICTORY!'
+      endResults.textContent = "VICTORY!";
     } else {
-      endResults.textContent = 'DEFEAT!'
+      endResults.textContent = "DEFEAT!";
     }
-}
+  }
+
+  
 }
 
 // Listens for button click, and applies button.id value to playerSelection
@@ -88,7 +100,16 @@ buttons.forEach((button) => {
 });
 
 function playAgain() {
-
+  modal.showModal();
+  closeModal.addEventListener('click', () => {
+    modal.close();
+  })
+  continuePlaying.addEventListener('click', () => {
+    modal.close();
+    mainGame();
+  })
+  
+  // If YES:
+  // playerScore = 0;
+  // computerScore = 0;
 }
-
-
