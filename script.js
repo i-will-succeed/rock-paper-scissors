@@ -1,31 +1,37 @@
 // Main Variables
 const buttons = document.querySelectorAll(".button");
-const computerSelection = computerPlay().toLowerCase();
 const gameResults = document.querySelector('.gameResults');
 
 const playerScoreDisplayed = document.getElementById('playerScore')
 const computerScoreDisplayed = document.getElementById('computerScore');
 
-const begin = document.querySelector('.beginText')
 
 
 let computerScore = 0;
 let playerScore = 0;
 
+// TODO --> Figure out how to remove event listener, clean up code, instead of using button.id,'
+// maybe create variable (playerSelection) from the information in event listener,
+// Figure out why Score Displays are acting funny
+
 // Listens for button click, and applies button.id value to playerSelection
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    gameResults.textContent = (playRound(button.id, computerSelection));
+    playerSelection = button.id
+    const computerSelection = computerPlay().toLowerCase();
 
-    playerScoreDisplayed.style.cssText = 'background-color: blueviolet; box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;';
-    computerScoreDisplayed.style.cssText = 'background-color: blueviolet; box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;';   
+    
+    gameResults.textContent = (playRound(playerSelection, computerSelection));
+
+    // playerScoreDisplayed.style.cssText = 'background-color: blueviolet; box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;';
+    // computerScoreDisplayed.style.cssText = 'background-color: blueviolet; box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;';   
 
     playerScoreDisplayed.textContent = `Your Score: ${playerScore}`;
     computerScoreDisplayed.textContent = `Computer Score: ${computerScore}`;
 
     if (playerScore === 5 || computerScore === 5) {
       gameResults.textContent = `Final SCORE:\nYour score is: ${playerScore}, Computer Score is: ${computerScore}`
-      return
+      button.removeEventListener('click', this);
     }
 
   })
@@ -78,3 +84,5 @@ function playRound(playerSelection, computerSelection) {
     return "Invalid Input";
   }
 }
+
+
