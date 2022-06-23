@@ -35,13 +35,23 @@ body {
     color: white;
     font-size: 1.3rem;
     background-color: blueviolet;
-    box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;';
+    box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;
 
 }
 
 .gameResults {
+    color: white;
+    background-color: blueviolet;
+    box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+    padding: 1rem;
+
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
+
+    align-self: center;
+    height: auto;
+    width: 450px;
 }
 
 .beginText {
@@ -58,13 +68,25 @@ body {
     padding: 2rem;
 }
 
+.endResults {
+    font-weight: bold;
+    font-size: xx-large;
+    color: blueviolet;
+    box-shadow: rgb(138, 43, 226) 0px 20px 30px -10px;
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+    padding: 1rem;
+    align-self: center;
+}
 
+
+/* BUTTON ATTRIBUTES */
 .button {
     border: rgb(138, 43, 226) 2px solid;
     border-radius: 10px;
     box-shadow: rgba(138, 43, 226, 0.4) 5px 5px, rgba(138, 43, 226, 0.3) 10px 10px, rgba(138, 43, 226, 0.2) 15px 15px, rgba(138, 43, 226, 0.1) 20px 20px, rgba(138, 43, 226, 0.05) 25px 25px;;
 }
-
 
 .button:hover {
     background-color: #8a2be217;
@@ -79,7 +101,6 @@ body {
 .button img {
     height: auto;
     width: 300px;
-    color: white;
 }
 
 .footer {
