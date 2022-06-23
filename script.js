@@ -4,6 +4,7 @@ const playerScoreDisplayed = document.getElementById("playerScore");
 const computerScoreDisplayed = document.getElementById("computerScore");
 const gameResults = document.querySelector(".gameResults");
 const endResults = document.querySelector(".endResults");
+const playAgainButton = document.querySelector(".playAgain")
 
 // Modal Variables
 const modal = document.querySelector(".modal");
@@ -17,6 +18,7 @@ let playerSelection;
 
 // Hides End Results
 endResults.style.visibility = "hidden";
+playAgainButton.style.visibility = 'hidden';
 
 // Generates random number between 0 and 2,
 // and applies 'rock', 'paper', or 'scissors' to value
@@ -94,6 +96,10 @@ function playAgain() {
   modal.showModal();
   closeModal.addEventListener('click', () => {
     modal.close();
+    playAgainButton.style.visibility = 'visible';
+    playAgainButton.addEventListener('click', () => {
+      window.location.reload();
+    })
   })
   continuePlaying.addEventListener('click', () => {
     modal.close();

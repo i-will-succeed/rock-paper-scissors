@@ -75,6 +75,19 @@ body {
     align-self: center;
 }
 
+.playAgain {
+    width: 100px;
+    align-self: center;
+    border: 1px blueviolet solid;
+    color: blueviolet;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;
+}
+
 
 /* BUTTON ATTRIBUTES */
 .button {
@@ -83,12 +96,12 @@ body {
     box-shadow: rgba(138, 43, 226, 0.4) 5px 5px, rgba(138, 43, 226, 0.3) 10px 10px, rgba(138, 43, 226, 0.2) 15px 15px, rgba(138, 43, 226, 0.1) 20px 20px, rgba(138, 43, 226, 0.05) 25px 25px;;
 }
 
-.button:hover {
+.button:hover, .playAgain:hover {
     background-color: #8a2be217;
     cursor: pointer;
 }
 
-.button:active {
+.button:active, .playAgain:active {
     background-color: #8a2be24f;
     transform: translate(1%, 1%)
 }
