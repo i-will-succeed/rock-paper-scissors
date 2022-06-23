@@ -5,14 +5,12 @@ const computerScoreDisplayed = document.getElementById("computerScore");
 const gameResults = document.querySelector(".gameResults");
 const endResults = document.querySelector(".endResults");
 
+// Modal Variables
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".closeModal");
 const continuePlaying = document.querySelector('.continue');
 
-// openModal.addEventListener('click', () => {
-//   modal.showModal();
-// })
-
+// Game Variables
 let computerScore = 0;
 let playerScore = 0;
 let playerSelection;
@@ -82,7 +80,6 @@ function compareScores() {
       button.removeEventListener("click", getPlayerSelection);
     });
     gameResults.innerText = `Final Score\n\nYour score is: ${playerScore}\nComputer Score is: ${computerScore}`;
-
     endResults.style.visibility = "visible";
     playAgain();
     if (playerScore > computerScore) {
@@ -91,18 +88,10 @@ function compareScores() {
       endResults.textContent = "DEFEAT!";
     }
   }
-
-  
 }
-
-// Listens for button click, and applies button.id value to playerSelection
-buttons.forEach((button) => {
-  button.addEventListener("click", getPlayerSelection);
-});
 
 function playAgain() {
   modal.showModal();
-  
   closeModal.addEventListener('click', () => {
     modal.close();
   })
@@ -110,9 +99,9 @@ function playAgain() {
     modal.close();
     window.location.reload();
   })
-  
-  // If YES:
-  // playerScore = 0;
-  // computerScore = 0;
 }
 
+// Listens for button click, and gets playerSelection from button.target.alt
+buttons.forEach((button) => {
+  button.addEventListener("click", getPlayerSelection);
+});
