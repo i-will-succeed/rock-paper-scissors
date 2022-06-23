@@ -15,10 +15,11 @@ let playerScore = 0;
 // Listens for button click, and applies button.id value to playerSelection
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    // begin.textContent = '';
     gameResults.textContent = (playRound(button.id, computerSelection));
-    playerScoreDisplayed.style.cssText = 'background-color: blueviolet';
-    computerScoreDisplayed.style.cssText = 'background-color: blueviolet'; 
+
+    playerScoreDisplayed.style.cssText = 'background-color: blueviolet; box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;';
+    computerScoreDisplayed.style.cssText = 'background-color: blueviolet; box-shadow: rgba(138, 43, 226, 0.16) 0px 3px 6px, rgba(138, 43, 226, 0.23) 0px 3px 6px;';   
+
     playerScoreDisplayed.textContent = `Your Score: ${playerScore}`;
     computerScoreDisplayed.textContent = `Computer Score: ${computerScore}`;
 
