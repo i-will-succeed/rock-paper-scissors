@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="flexContainer">
+    <div class="title">
+      <h1>Rock Paper Scissors</h1>
+      <h2>First to 5 points... GO!</h2>
+    </div>
+
+    <div class="scoreContainer">
+      <div id="playerScore">
+        <p>Your Score: 0</p>
+      </div>
+      <div id="computerScore">
+        <p>Computer Score: 0</p>
+      </div>
+    </div>
+
+    <!-- <p class="beginText">Begin!</p> -->
+
+    <div class="gameContainer">
+      <div id="rock" class="button"><img src="./images/rock.png" alt="rock"></div>
+      <div id="paper" class="button"><img src="./images/paper.png" alt="paper"></div>
+      <div id="scissors" class="button"><img src="./images/scissors.png" alt="scissors" style="transform: scaleX(-1); padding: 1rem;"></div>
+    </div>
+
+    <p class="endResults"></p>
+    <p class="gameResults">Choose your weapon!</p>
+    
+    <dialog class="modal" id="modal">
+      <h3>Play Again?</h3>
+      <button class="continue">Lemme At 'Em!</button>
+      <button class="closeModal">I'm good, thanks</button>
+    </dialog>
+
+    <div class="footer">
+      © Lazy Dayz Productions
+    </div>
+
+  </div>
+  </body>
+</html>
+
+
