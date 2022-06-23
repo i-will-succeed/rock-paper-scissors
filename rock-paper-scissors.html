@@ -9,6 +9,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="flexContainer">
     <div class="title">
       <h1>Rock Paper Scissors</h1>
       <h2>5 Rounds... GO!</h2>
@@ -23,12 +24,20 @@
       </div>
     </div>
 
-    <p class="gameResults">BEGIN!</p>
+    <!-- <p class="beginText">Begin!</p> -->
 
     <div class="gameContainer">
       <div id="rock" class="button"><img src="./images/rock.png"></div>
       <div id="paper" class="button"><img src="./images/paper.png"></div>
-      <div id="scissors" class="button"><img src="./images/Scissors.png"></div>
+      <div id="scissors" class="button"><img src="./images/scissors.png" style="transform: scaleX(-1); padding: 1rem;"></div>
     </div>
+
+    <p class="gameResults">Choose your weapon!</p>
+
+    <div class="footer">
+      © Lazy Dayz Productions
+    </div>
+
+  </div>
   </body>
 </html>

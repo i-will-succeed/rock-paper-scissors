@@ -3,8 +3,17 @@ body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
+    /* background-image: url(./images/nordwood-themes-R53t-Tg6J4c-unsplash\(1\).jpg); */
 }
 
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    height: 100vh;
+    /* margin: 0; */
+}
 
 .title {
     display: flex;
@@ -16,39 +25,65 @@ body {
 .scoreContainer {
     display: flex;
     justify-content: space-around;
-    padding: 3rem;
+    padding: 1rem;
+}
 
+#playerScore,
+#computerScore {
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.gameResults {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.beginText {
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .gameContainer {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 3rem;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 
 .button {
-    /* padding: 2rem; */
     border: blueviolet 2px solid;
     border-radius: 10px;
-    /* box-shadow: 5px 2.5px 2.5px rgba(0, 0, 0, 0.404); */
+    
 }
 
 .button:hover {
-    background-color: rgba(128, 128, 128, 0.062);
+    background-color: #8a2be217;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
-.button:after {
+.button:active {
+    background-color: #8a2be24f;
+    transform: translate(1%, 1%)
 }
 
 
 .button img {
     height: auto;
-    width: 200px;
+    width: 300px;
     color: white;
 }
 
+.footer {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    flex-shrink: 0;
+   
+}

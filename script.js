@@ -6,25 +6,30 @@ const gameResults = document.querySelector('.gameResults');
 const playerScoreDisplayed = document.getElementById('playerScore')
 const computerScoreDisplayed = document.getElementById('computerScore');
 
+const begin = document.querySelector('.beginText')
+
+
 let computerScore = 0;
 let playerScore = 0;
 
 // Listens for button click, and applies button.id value to playerSelection
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
+    // begin.textContent = '';
     gameResults.textContent = (playRound(button.id, computerSelection));
-    playerScoreDisplayed.textContent = `Player Score: ${playerScore}`;
+    playerScoreDisplayed.style.cssText = 'background-color: blueviolet';
+    computerScoreDisplayed.style.cssText = 'background-color: blueviolet'; 
+    playerScoreDisplayed.textContent = `Your Score: ${playerScore}`;
     computerScoreDisplayed.textContent = `Computer Score: ${computerScore}`;
 
     if (playerScore === 5 || computerScore === 5) {
-      gameResults.textContent = `Final SCORE:
-      Your score is: ${playerScore},
-      Computer Score is: ${computerScore}`
-      return;
+      gameResults.textContent = `Final SCORE:\nYour score is: ${playerScore}, Computer Score is: ${computerScore}`
+      return
     }
 
   })
 });
+
 
 // Generates random number between 0 and 2,
 // and applies 'rock', 'paper', or 'scissors' to value
