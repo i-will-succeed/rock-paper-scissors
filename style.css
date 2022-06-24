@@ -113,8 +113,8 @@ body {
 
 /* MODAL */
 .modal {
+    animation: show 5s;
     opacity: 1;
-    animation: show 2s;
     padding: 1em;
     max-width: 50ch;
     border-radius: 10px;
@@ -122,6 +122,12 @@ body {
     border: none;
     color: white;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
+}
+
+.modal::backdrop {
+    background: linear-gradient(45deg, red, blue);
+    opacity: .4;
+    /* animation: show 5s; */
 }
 
 @keyframes show {
@@ -135,10 +141,7 @@ body {
     }
 }
 
-.modal::backdrop {
-    background: linear-gradient(45deg, red, blue);
-    opacity: .4;
-}
+
 
 .modal button {
     /* background-color: transparent; */
