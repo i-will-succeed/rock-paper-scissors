@@ -161,6 +161,7 @@ body {
     background: linear-gradient(45deg, white, purple);
     opacity: .4;
     border: none;
+    transform: translate(1%, 1%)
 }
 
 
