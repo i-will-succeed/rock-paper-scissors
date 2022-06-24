@@ -113,20 +113,20 @@ body {
 
 /* MODAL */
 .modal {
-    animation: show 5s;
-    opacity: 1;
+    animation: show 3s;
     padding: 1em;
     max-width: 50ch;
     border-radius: 10px;
     background: blueviolet;
     border: none;
     color: white;
-    box-shadow: 0 0 1em rgba(255, 255, 255, 0.64);
+    box-shadow: 0 0 1em rgba(255, 255, 255, 0.75);
 }
 
 .modal::backdrop {
+    opacity: .15;
+    /* background: linear-gradient(45deg, red, blue); */
     background: linear-gradient(45deg, red, blue);
-    opacity: .4;
 }
 
 @keyframes show {
@@ -141,13 +141,12 @@ body {
 }
 
 
-
 .modal button {
     /* background-color: transparent; */
     border-radius: 5px;
     cursor: pointer;
     border: none;
-    padding: 1rem;
+    padding: .8rem;
     font-size: 1.1rem;
     background: white;
 }
