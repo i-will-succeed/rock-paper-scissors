@@ -119,8 +119,7 @@ body {
 }
 
 .modal::backdrop {
-    opacity: .04;
-    /* background: linear-gradient(45deg, red, blue); */
+    opacity: .1;
     background: linear-gradient(45deg, red, blue);
 }
 
@@ -136,7 +135,6 @@ body {
 }
 
 .modal button {
-    /* background-color: transparent; */
     border-radius: 5px;
     cursor: pointer;
     border: none;
