@@ -4,12 +4,12 @@ const playerScoreDisplayed = document.getElementById("playerScore");
 const computerScoreDisplayed = document.getElementById("computerScore");
 const gameResults = document.querySelector(".gameResults");
 const endResults = document.querySelector(".endResults");
-const playAgainButton = document.querySelector(".playAgain")
+const playAgainButton = document.querySelector(".playAgain");
 
 // Modal Variables
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".closeModal");
-const continuePlaying = document.querySelector('.continue');
+const continuePlaying = document.querySelector(".continue");
 
 // Game Variables
 let computerScore = 0;
@@ -18,7 +18,7 @@ let playerSelection;
 
 // Hides End Results
 endResults.style.visibility = "hidden";
-playAgainButton.style.visibility = 'hidden';
+playAgainButton.style.visibility = "hidden";
 
 // Generates random number between 0 and 2,
 // and applies 'rock', 'paper', or 'scissors' to value
@@ -81,31 +81,36 @@ function compareScores() {
     buttons.forEach((button) => {
       button.removeEventListener("click", getPlayerSelection);
     });
+
     gameResults.innerText = `Final Score\n\nYour score is: ${playerScore}\nComputer Score is: ${computerScore}`;
     
+    showEndResult();
     playAgain();
-    if (playerScore > computerScore) {
-      endResults.textContent = "VICTORY!";
-    } else {
-      endResults.textContent = "DEFEAT!";
-    }
+  }
+}
+
+function showEndResult () {
+  if (playerScore > computerScore) {
+    endResults.textContent = "VICTORY!";
+  } else {
+    endResults.textContent = "DEFEAT!";
   }
 }
 
 function playAgain() {
   modal.showModal();
   endResults.style.visibility = "visible";
-  closeModal.addEventListener('click', () => {
+  closeModal.addEventListener("click", () => {
     modal.close();
-    playAgainButton.style.visibility = 'visible';
-    playAgainButton.addEventListener('click', () => {
+
+    playAgainButton.style.visibility = "visible";
+    playAgainButton.addEventListener("click", () => {
       window.location.reload();
-    })
-  })
-  continuePlaying.addEventListener('click', () => {
-    modal.close();
+    });
+  });
+  continuePlaying.addEventListener("click", () => {
     window.location.reload();
-  })
+  });
 }
 
 // Listens for button click, and gets playerSelection from button.target.alt
