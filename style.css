@@ -124,7 +124,7 @@ body {
 }
 
 .modal::backdrop {
-    opacity: .15;
+    opacity: .04;
     /* background: linear-gradient(45deg, red, blue); */
     background: linear-gradient(45deg, red, blue);
 }
