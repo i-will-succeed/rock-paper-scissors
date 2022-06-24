@@ -121,13 +121,12 @@ body {
     background: blueviolet;
     border: none;
     color: white;
-    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    box-shadow: 0 0 1em rgba(255, 255, 255, 0.64);
 }
 
 .modal::backdrop {
     background: linear-gradient(45deg, red, blue);
     opacity: .4;
-    /* animation: show 5s; */
 }
 
 @keyframes show {

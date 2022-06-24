@@ -82,7 +82,7 @@ function compareScores() {
       button.removeEventListener("click", getPlayerSelection);
     });
     gameResults.innerText = `Final Score\n\nYour score is: ${playerScore}\nComputer Score is: ${computerScore}`;
-    endResults.style.visibility = "visible";
+    
     playAgain();
     if (playerScore > computerScore) {
       endResults.textContent = "VICTORY!";
@@ -94,6 +94,7 @@ function compareScores() {
 
 function playAgain() {
   modal.showModal();
+  endResults.style.visibility = "visible";
   closeModal.addEventListener('click', () => {
     modal.close();
     playAgainButton.style.visibility = 'visible';
